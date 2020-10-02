@@ -10,7 +10,6 @@ import { ColorPickerPage } from '../popover/color-picker/color-picker';
 import { ElectronProvider } from '../providers/electron/electron';
 import { HttpClientModule } from '@angular/common/http';
 import { DataManager } from '../providers/DataManager';
-import { Map } from '../providers/map';
 
 import { Inventories } from '../providers/Inventories';
 import { Inventory } from '../components/inventory/inventory';
@@ -55,8 +54,7 @@ import { PinPage } from '../modals/pin/pin.modal';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ElectronProvider,
     DataManager,
-    Inventories,
-    Map
+    Inventories
   ]
 })
 export class AppModule {}
