@@ -1,0 +1,115 @@
+// http://ionicframework.com/docs/theming/
+
+html {
+  background-color: #282f35;
+}
+
+ion-app {
+  border: 1px solid #282f35;
+
+  ion-modal {
+
+    &.dialogue-modal {
+
+      .modal-wrapper {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+
+  .app-root {
+    display: block;
+    overflow: hidden;
+    height: 100vh;
+
+    ion-nav {
+      top: 0px;
+      background-color: #282f35;
+
+      .ion-page {
+        height: 100%;
+
+        ion-content {
+          background-color: unset;
+          color: rgb(200,200,200);
+          
+          .fixed-content {
+            z-index: 0;
+
+            #canvas-container {
+              height: 100%;
+              width: 100%;
+              position: absolute;
+              top: 0;
+          
+              canvas {
+                height: 100%;
+                width: 100%;
+              }
+            }
+
+            .background-img{
+              position: absolute;
+              height: 100%;
+              width: 100%;
+              background-position: bottom;
+              background-size: cover;
+              background-repeat: no-repeat;
+            }
+          }
+
+          .scroll-content {
+            overflow-y: auto;
+            z-index: 1;
+            position: relative;
+            height: 100%;
+            width: 100%;
+          }
+
+          .grid-center {
+            height: 100%;
+            justify-content: center;
+
+            .align-center {
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
+
+    #btn-back {
+      position: absolute;
+      z-index: 1;
+      width: 50px;
+      height: 50px;
+      top: 10px;
+      left: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100%;
+      border: 2px solid #99cccc;
+      font-size: 32px;
+      color: #99cccc;
+    }
+  }
+}
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.

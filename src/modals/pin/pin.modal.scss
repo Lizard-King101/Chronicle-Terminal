@@ -1,0 +1,58 @@
+.pin-group {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #282f35;
+
+    .display {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .pin {
+            font-size: 2em;
+            color: #99cccc;
+        }
+    }
+
+    .pinpad {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        width: 50%;
+        padding: 15px;
+
+        .pin-row{
+
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+            flex: 1 0 0px;
+
+            .pin-btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                font-size: 1.8em;
+                margin: 0px 5px;
+                text-decoration: none;
+                color: #99cccc;
+                border: 2px solid #99cccc;
+                border-radius: 4px;
+                flex: 1 0 0px;
+
+                &.hidden {
+                    color: unset;
+                    border: unset;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+<ion-content>
+  <div ion-fixed class="background-img" style="background-image: url('assets/imgs/app_bg.jpg')"></div>
+  <div ion-fixed id="canvas-container">
+    <canvas id="canvas" #Canvas></canvas>
+  </div>
+  <div id="app-settings" class="button" (click)="settings()">
+    <ion-icon name="settings"></ion-icon>
+  </div>
+  <ion-grid class="grid-center">
+    <ion-row class="align-center">
+      <ion-col col-xs-6 col-md-6 col-lg-5 col-xl-4>
+        <button ion-button block (click)="onStash()">Stash</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

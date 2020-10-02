@@ -1,0 +1,31 @@
+<ion-content>
+    <div class="pin-group">
+        <div class="display">
+            <div class="pin">{{pinHidden}}</div>
+        </div>
+        <div class="pinpad">
+            <div class="pin-row">
+                <a class="pin-btn" (click)="onPinButton('7')">7</a>
+                <a class="pin-btn" (click)="onPinButton('8')">8</a>
+                <a class="pin-btn" (click)="onPinButton('9')">9</a>
+            </div>
+            <div class="pin-row">
+                <a class="pin-btn" (click)="onPinButton('4')">4</a>
+                <a class="pin-btn" (click)="onPinButton('5')">5</a>
+                <a class="pin-btn" (click)="onPinButton('6')">6</a>
+            </div>
+            <div class="pin-row">
+                <a class="pin-btn" (click)="onPinButton('1')">1</a>
+                <a class="pin-btn" (click)="onPinButton('2')">2</a>
+                <a class="pin-btn" (click)="onPinButton('3')">3</a>
+            </div>
+            <div class="pin-row">
+                <a class="pin-btn hidden"></a>
+                <a class="pin-btn" (click)="onPinButton('0')">0</a>
+                <a class="pin-btn" (click)="onSubmit()">
+                    <ion-icon name="arrow-forward"></ion-icon>
+                </a>
+            </div>
+        </div>
+    </div>
+</ion-content>

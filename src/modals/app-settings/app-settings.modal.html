@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons start>
+            <button ion-button icon-only (click)="onCloseModal()">
+                <ion-icon name="arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title>Settings</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <button ion-button block (click)="onFullScreen()">{{ (fullScreen ? 'Un Full Screen' : 'Full Screen') }}</button>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <button ion-button block (click)="onClose()">Close</button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    
+</ion-content>

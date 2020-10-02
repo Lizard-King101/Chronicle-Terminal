@@ -1,0 +1,14 @@
+<div id="inventory" #invContainer>
+    <div class="inv-grid">
+        <div class="row" *ngFor="let row of cells; let r = index;">
+            <div class="cell"
+                *ngFor="let cell of row; let c = index;" 
+                (dragover)="onDragOver($event, c, r)" 
+                (drop)="onDrop($event, c, r)">
+                <ng-container *ngIf="cell && cell !== 'filled'">
+                    <item [item]="cell" [inventoryId]="id" draggable="true"></item>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>
