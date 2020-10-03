@@ -10,6 +10,7 @@ const { BrowserWindow } = electron.remote;
 @Injectable()
 export class ElectronProvider {
   ipc: any = electron.ipcRenderer;
+  kiosk: boolean = false;
   constructor() {
     
   }
@@ -37,6 +38,13 @@ export class ElectronProvider {
       return true;
     }
   }
+
+  toggleKiosk() {
+    let window = BrowserWindow.getFocusedWindow();
+    this.kiosk = !this.kiosk;
+    window.setKiosk(this.kiosk);
+  }
+
   closeWindow() {
     let window = BrowserWindow.getFocusedWindow();
     window.close();

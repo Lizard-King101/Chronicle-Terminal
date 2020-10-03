@@ -13,6 +13,7 @@
     "ionic:serve": "ionic-app-scripts serve",
     "electron": "electron .",
     "electron-build": "ionic build && electron .",
+    "electron-run": "electron .",
     "dev:electron-main": "cross-env NODE_ENV='development' electron -r babel-register ./app/renderer/",
     "watch": "ionic build",
     "start": "ionic build && electron-forge start",

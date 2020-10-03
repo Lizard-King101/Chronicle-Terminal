@@ -21,6 +21,10 @@ export class AppSettings {
         this.electron.closeWindow();
     }
 
+    onKiosk() {
+        this.electron.toggleKiosk();
+    }
+
     onCloseModal() {
         this.nav.pop();
     }
