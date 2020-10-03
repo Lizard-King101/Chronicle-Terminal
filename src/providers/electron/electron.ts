@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 declare var electron: any;
 const { BrowserWindow } = electron.remote;
+const { webFrame } = electron.webFrame;
 /*
   Generated class for the ElectronProvider provider.
 
@@ -12,7 +13,12 @@ export class ElectronProvider {
   ipc: any = electron.ipcRenderer;
   kiosk: boolean = false;
   constructor() {
+    console.log(electron);
     
+    // webFrame.setZoomFactor(1);
+    // webFrame.setZoomLevelLimits(1, 1);
+    webFrame.setVisualZoomLevelLimits(1, 1);
+    // webFrame.setLayoutZoomLevelLimits(0, 0);
   }
 
   openNewWindow(page = false) {

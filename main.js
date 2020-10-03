@@ -39,7 +39,8 @@ function createWindow() {
     minHeight: 200,
     backgroundColor: '#ffffff',
     alwaysOnTop: true,
-    frame: false
+    frame: false,
+    
   })
   win.loadURL(url);
 
