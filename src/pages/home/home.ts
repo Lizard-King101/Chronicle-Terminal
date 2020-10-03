@@ -25,7 +25,7 @@ export class HomePage{
 
   ionViewDidLoad() {
     this.canvas = <HTMLElement>this.canvas.nativeElement;
-    this.animation = new CanvasAnimation().init(this.canvas, Dot);
+    // this.animation = new CanvasAnimation().init(this.canvas, Dot);
   }
   
   ionViewDidEnter() {
